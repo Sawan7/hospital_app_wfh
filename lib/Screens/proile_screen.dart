@@ -10,99 +10,175 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController otpController = TextEditingController();
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.blue,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Container(
-                  margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                  color: Colors.blue,
-                  height: 100,
-                  width: 200,
-                  child: const Image(
-                      image: AssetImage('images/ml_profile_Image.png'))),
-            ),
-            const Text(
-              'Virat Kohli',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
+        child: Scaffold(
+      backgroundColor: Colors.blue,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+              child: Image.asset(
+            'images/ml_profile_Image.png',
+            height: 170,
+          )),
+          const Text(
+            'Sawan Bhardwaj',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white),
+          ),
+          const Text(
+            'SawanBhardwaj@gmail.com',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 14, color: Colors.white),
+          ),
+          Expanded(
+            child: Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
                   color: Colors.white,
-                  fontSize: 20),
-            ),
-            const Text(
-              'ViratKohli@gmail.com',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 14,
-                  letterSpacing: 2),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        BorderRadius.only(topRight: Radius.circular(20.0))),
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 20, horizontal: 20),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text('Main Categories',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              )),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                  height: 100,
-                                  width: 170,
-                                  decoration: const BoxDecoration(
-                                      color: Colors.red,
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'images/ml_prescription1.png'))),
-                                  child: Column(
-                                    children: const [Text('Prescription')],
-                                  )),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                height: 140,
-                                width: 170,
-                                color: Colors.red,
-                              )
-                            ],
-                          )
-                        ],
-                      ),
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(30.0),
+                      topLeft: Radius.circular(30.0))),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'Settings',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'View all >',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue),
+                        ),
+                      ],
                     ),
-                  ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Divider(
+                      color: Colors.black,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ListTile(
+                          leading: Container(
+                            height: 35,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(2.0)),
+                            child: const Icon(
+                              Icons.settings,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          title: const Text(
+                            'Settings',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
+                          trailing: const Icon(Icons.arrow_forward),
+                        ),
+                        ListTile(
+                          leading: Container(
+                            height: 35,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(2.0)),
+                            child: const Icon(
+                              Icons.currency_rupee,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          title: const Text(
+                            'Billing Details',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
+                          trailing: const Icon(Icons.arrow_forward),
+                        ),
+                        ListTile(
+                          leading: Container(
+                            height: 35,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(2.0)),
+                            child: const Icon(
+                              Icons.person,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          title: const Text(
+                            'User Management',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
+                          trailing: const Icon(Icons.arrow_forward),
+                        ),
+                        const Divider(
+                          color: Colors.black,
+                        ),
+                        ListTile(
+                          leading: Container(
+                            height: 35,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(2.0)),
+                            child: const Icon(
+                              Icons.info,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          title: const Text(
+                            'Information',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
+                          trailing: const Icon(Icons.arrow_forward),
+                        ),
+                        ListTile(
+                          leading: Container(
+                            height: 35,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(2.0)),
+                            child: const Icon(
+                              Icons.logout,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          title: const Text(
+                            'Logout',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
+                          trailing: const Icon(Icons.arrow_forward),
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
-            )
-          ],
-        ),
+            ),
+          ),
+        ],
       ),
-    );
+    ));
   }
 }

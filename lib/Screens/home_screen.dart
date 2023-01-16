@@ -205,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     Image.asset(
                                       'images/ml_department_one.png',
-                                      height: 120,
+                                      height: 100,
                                     ),
                                     const Text(
                                       'Doctor',
@@ -219,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     Image.asset(
                                       'images/ml_department_three.png',
-                                      height: 120,
+                                      height: 100,
                                     ),
                                     const Text(
                                       'Doctor',
@@ -247,7 +247,35 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     Image.asset(
                                       'images/ml_department_two.png',
-                                      height: 120,
+                                      height: 100,
+                                    ),
+                                    const Text(
+                                      'Doctor',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Image.asset(
+                                      'images/ml_department_one.png',
+                                      height: 100,
+                                    ),
+                                    const Text(
+                                      'Doctor',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Image.asset(
+                                      'images/ml_department_three.png',
+                                      height: 100,
                                     ),
                                     const Text(
                                       'Doctor',
@@ -274,36 +302,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Column(
                                   children: [
                                     Image.asset(
-                                      'images/ml_department_three.png',
-                                      height: 120,
-                                    ),
-                                    const Text(
-                                      'Doctor',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
-                                ),
-                                Column(
-                                  children: [
-                                    Image.asset(
-                                      'images/ml_department_one.png',
-                                      height: 120,
-                                    ),
-                                    const Text(
-                                      'Doctor',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
-                                ),
-                                Column(
-                                  children: [
-                                    Image.asset(
-                                      'images/ml_department_three.png',
-                                      height: 120,
+                                      'images/ml_department_two.png',
+                                      height: 100,
                                     ),
                                     const Text(
                                       'Doctor',
@@ -329,4 +329,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
